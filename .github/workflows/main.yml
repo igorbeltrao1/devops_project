@@ -13,5 +13,10 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             
-            - name: deploy em homologação
-              run: git push origin qa
+            - run: git config --global user.name 'mateusmagalhaes22' && git config --global user.email 'mateus.magalhaes@hotmail.com.br'
+            
+            - run: |
+                git checkout -b qa
+                git add .
+                git commit -m "Push automático para ambiente de homologação"
+                git push origin qa
