@@ -19,4 +19,4 @@ jobs:
                 git checkout qa
                 git add .
                 git commit -m "Push automático para ambiente de homologação"
-                git push origin qa
+                git push
