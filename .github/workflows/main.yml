@@ -1,0 +1,17 @@
+name: deployment workflow
+
+on:
+    push:
+        branches: 
+            - main
+    workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v2
+            
+            - name: deploy em homologação
+              run: git push origin qa
