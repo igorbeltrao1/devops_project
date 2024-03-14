@@ -16,7 +16,7 @@ jobs:
             - run: git config --global user.name 'mateusmagalhaes22' && git config --global user.email 'mateus.magalhaes@hotmail.com.br'
             
             - run: |
-                git checkout qa
+                git checkout origin/qa
                 git add .
                 git commit -m "Push automático para ambiente de homologação"
-                git push
+                git push origin qa
